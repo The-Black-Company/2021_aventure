@@ -1,0 +1,43 @@
+[ Scene
+    Image= "./res/background/01home.png"
+    Name= "Home"
+]
+{ Nodes
+	[
+	Key= "spawn"
+        Coord= 1050, 700
+        Radius= 200, 100
+        Default= 1
+        Scene= 0
+        Object= 0
+        Condition= 1
+	],
+	[
+	Key= "canap"
+        Coord= 730, 500
+        Radius= 150, 150
+        Default= 0
+        Scene= 1
+        Object= 2
+        Condition= 0
+	],
+	[
+	Key= "bedroom"
+        Coord= 1400, 550
+        Radius= 130, 130
+        Default= 0
+        Scene= 2
+        Object= 0
+        Condition= 2
+	]
+}
+{ Links
+    [
+        Nodes= "spawn", "canap"
+        Time= 1
+    ],
+    [
+        Nodes= "spawn", "bedroom"
+        Time= 1
+    ]
+}

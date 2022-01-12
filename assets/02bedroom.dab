@@ -1,0 +1,69 @@
+[ Scene
+    Image= "./res/background/02bedroom.png"
+    Name= "Bedroom"
+]
+{ Nodes
+	[
+	Key= "spawn"
+        Coord= 500, 550
+        Radius= 100, 160
+        Default= 1
+        Scene= 1
+        Object= 0
+        Condition= 2
+	],
+	[
+	Key= "tv"
+        Coord= 1000, 475
+        Radius= 400, 100
+        Default= 0
+        Scene= 200
+        Object= 0
+        Condition= 3
+	],
+	[
+	Key= "drawer"
+        Coord= 1400, 550
+        Radius= 100, 60
+        Default= 0
+        Scene= 2
+        Object= 3
+        Condition= 0
+	],
+	[
+	Key= "inter"
+        Coord= 1350, 475
+        Radius= 1, 1
+        Default= 0
+        Scene= 2
+        Object= 0
+        Condition= 0
+	],
+	[
+	Key= "itsdangeroustogoalone"
+        Coord= 1675, 475
+        Radius= 10, 10
+        Default= 0
+        Scene= 300
+        Object= 0
+        Condition= 0
+	]
+}
+{ Links
+    [
+        Nodes= "spawn", "tv"
+        Time= 1
+    ],
+    [
+        Nodes= "tv", "inter"
+        Time= 1
+    ],
+    [
+        Nodes= "inter", "drawer"
+        Time= 1
+    ],
+    [
+        Nodes= "itsdangeroustogoalone", "drawer"
+        Time= 20
+    ]
+}

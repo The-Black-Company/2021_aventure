@@ -1,0 +1,73 @@
+[ Scene
+    Image= "./res/background/00street.png"
+    Name= "Street"
+]
+{ Nodes
+	[
+	Key= "spawn"
+        Coord= 1700, 670
+        Radius= 200, 140
+        Default= 1
+        Scene= 0
+        Object= 0
+        Condition= 0
+	],
+	[
+	Key= "inter"
+        Coord= 1200, 500
+        Radius= 1, 1
+        Default= 0
+        Scene= 0
+        Object= 0
+        Condition= 0
+	],
+	[
+	Key= "key"
+        Coord= 350, 550
+        Radius= 200, 200
+        Default= 0
+        Scene= 0
+        Object= 1
+        Condition= 0
+	],
+	[
+	Key= "home"
+        Coord= 1550, 300
+        Radius= 160, 70
+        Default= 0
+        Scene= 1
+        Object= 0
+        Condition= 1
+	],
+	[
+	Key= "inter2"
+        Coord= 1450, 500
+        Radius= 1, 1
+        Default= 0
+        Scene= 0
+        Object= 0
+        Condition= 0
+	]
+}
+{ Links
+    [
+        Nodes= "spawn", "inter"
+        Time= 2
+    ],
+    [
+        Nodes= "spawn", "inter2"
+        Time= 2
+    ],
+    [
+        Nodes= "inter2", "home"
+        Time= 4
+    ],
+    [
+        Nodes= "inter", "key"
+        Time= 3
+    ],
+    [
+        Nodes= "inter", "inter2"
+        Time= 1
+    ]
+}
